@@ -11,20 +11,28 @@ public abstract class Employee {
         this.name = name;
         this.salery = salery;
         this.niNumber = niNumber;
-
     }
+
+    public void raiseSalery(int raise) {
+        this.salery += raise;
+    }
+
+    public double getBonus() {
+        return this.salery * 0.01;
+    }
+
 
     public String getName() {
         return name;
     }
 
-    public String getSalery() {
-        return getSalery;
+    public String getNiNumber() {
+        return this.niNumber;
     }
 
-    public String getNiNumber() {
-         return getNiNumber;
-        }
+    public int getSalery() {
+        return this.salery;
+    }
 
     public void setName(String name) {
         this.name = name;
@@ -37,16 +45,5 @@ public abstract class Employee {
     public void setSalery(int salery) {
         this.salery = salery;
     }
-
-    public void raiseSalery(int amount) {
-        this.salery += amount;
-    }
-
-    public double Bonus() {
-        return this.salery * 0.01;
-    }
-
-
-
 
 }
